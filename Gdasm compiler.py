@@ -30,9 +30,9 @@ def codefunc(n, a, b, c,r,fl):
     elif n == 13 and fl:
         values[a] = values[b] / values[c]
     elif n == 14 and fl:
-        values[a] = values[b] - (values[b] * (values[b] // values[c]))
+        values[a] = values[b] - values[c] * (values[b] // values[c])
     elif n == 15 and fl:
-        values[a] = values[b] - (values[b] * (values[b] // c))
+        values[a] = values[b] - c * (values[b] // c)
     elif n == 16 and fl:
         values[a] = math.floor(values[b])
     elif n == 17 and fl:
@@ -96,8 +96,8 @@ def codefunc(n, a, b, c,r,fl):
     elif n==40 and fl:
         if values[a]<=b: fl=True
         else: fl=False
-    elif n==41 and fl:
-        fl = not f
+    elif n==41:
+        fl = not fl
     elif n==42:
         fl = True
 
